@@ -119,12 +119,12 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def hud_get_available_languages():
+    def hud_get_available_languages(self):
         """Get the available programming languages inside of the HUD"""
         global languages
         return languages
 
-    def hud_can_toggle_programming_language() -> bool:
+    def hud_can_toggle_programming_language(self) -> bool:
         """Check if we should be able to toggle the programming language from the status bar"""
         active_modes = scope.get("mode")
         if (active_modes is not None):
@@ -133,11 +133,11 @@ class Actions:
                     return True
         return False
 
-    def hud_toggle_programming_language():
+    def hud_toggle_programming_language(self):
         """Toggle the programming language manually in the status bar"""
         actions.user.code_clear_language_mode()
         
-    def hud_get_programming_language() -> str:
+    def hud_get_programming_language(self) -> str:
         """Get the programming language to be displayed in the status bar - By default tries to mimic knausj"""
         active_modes = scope.get("mode")
         if (active_modes is not None):

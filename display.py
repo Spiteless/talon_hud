@@ -847,17 +847,17 @@ app.register('ready', hud_start)
 @mod.action_class
 class Actions:
 
-    def hud_enable():
+    def hud_enable(self):
         """Enables the HUD"""
         global hud
         hud.enable(True)
 
-    def hud_disable():
+    def hud_disable(self):
         """Disables the HUD"""
         global hud
         hud.disable(True)
 
-    def hud_persist_preferences():
+    def hud_persist_preferences(self):
         """Saves the HUDs preferences"""
         global hud
         hud.debounce_widget_preferences()
@@ -913,7 +913,7 @@ class Actions:
         """Show the context menu for a specific widget id"""
         hud.move_context_menu(widget_id, Point2d(pos_x, pos_y), buttons)
 
-    def hud_hide_context_menu():
+    def hud_hide_context_menu(self):
         """Show the context menu for a specific widget id"""
         hud.hide_context_menu()
 
@@ -975,7 +975,7 @@ class Actions:
         global hud
         hud.deactivate_poller(topic)
 
-    def hud_get_theme() -> HeadUpDisplayTheme:
+    def hud_get_theme(self) -> HeadUpDisplayTheme:
         """Get the current theme object from the HUD"""
         global hud
         return hud.theme
@@ -985,12 +985,12 @@ class Actions:
         global hud
         hud.add_theme(theme_name, theme_dir)
 
-    def hud_watch_directories():
+    def hud_watch_directories(self):
         """Watch the theme and preferences directories for changes - This gives a performance penalty and should only be used during development"""
         global hud
         hud.watch_directories()
 
-    def hud_unwatch_directories():
+    def hud_unwatch_directories(self):
         """Stop watching for changes in the theme directories"""
         global hud
         hud.unwatch_directories()
@@ -1000,17 +1000,17 @@ class Actions:
         global hud
         hud.focus_widget(widget_id, node_id)
 
-    def hud_focus():
+    def hud_focus(self):
         """Focus the HUD for keyboard interaction"""
         global hud
         hud.focus()
 
-    def hud_blur():
+    def hud_blur(self):
         """Blur the keyboard focus from the HUD to the previously focused application"""
         global hud
         hud.blur()
 
-    def hud_toggle_focus():
+    def hud_toggle_focus(self):
         """Toggle the focus on or off the HUD"""
         global hud
         hud.toggle_focus()

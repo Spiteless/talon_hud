@@ -159,18 +159,18 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def show_microphone_options():
+    def show_microphone_options(self):
         """Show the microphone options in a choice panel"""
         show_microphone_selection()
         
-    def hud_add_single_click_mic_toggle():
+    def hud_add_single_click_mic_toggle(self):
         """Add a single click toggle on the status bar"""
         add_statusbar_one_click_toggle()
         
-    def hud_remove_single_click_mic_toggle():
+    def hud_remove_single_click_mic_toggle(self):
         """Remove a single click toggle from the status bar"""
         remove_statusbar_one_click_toggle()
     
-    def hud_toggle_microphone():
+    def hud_toggle_microphone(self):
         """Toggle the HUD microphone"""
         toggle_microphone(None)

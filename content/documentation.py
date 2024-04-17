@@ -89,12 +89,12 @@ class Actions:
         global hud_documentation
         hud_documentation.add_file(title, description, filename)
         
-    def hud_watch_documentation_files():
+    def hud_watch_documentation_files(self):
         """Enable watching for changes in the documentation files for quicker development"""
         global hud_documentation
         hud_documentation.set_development_mode(True)
         
-    def hud_unwatch_documentation_files():
+    def hud_unwatch_documentation_files(self):
         """Disable watching for changes in the documentation files for quicker development"""
         global hud_documentation
         hud_documentation.set_development_mode(False)

@@ -56,6 +56,6 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def hud_toolkit_scope():
+    def hud_toolkit_scope(self):
         """Start debugging the Talon scope in the Talon HUD"""
         actions.user.hud_activate_poller("scope")

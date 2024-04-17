@@ -64,7 +64,7 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def hud_toolkit_lists():
+    def hud_toolkit_lists(self):
         """Show available  lists to view for the Talon HUD"""
         lists = registry.lists
         choices = []

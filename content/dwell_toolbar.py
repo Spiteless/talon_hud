@@ -352,12 +352,12 @@ class Actions:
         global dwell_toolbar_poller
         dwell_toolbar_poller.set_visibility(visible)
 
-    def hud_activate_dwell_key():
+    def hud_activate_dwell_key(self):
         """Activate a toolbar item manually"""
         global dwell_toolbar_poller
         dwell_toolbar_poller.activate_cursor()
 
-    def hud_deactivate_dwell_key():
+    def hud_deactivate_dwell_key(self):
         """Clear the currently selected toolbar item"""
         global dwell_toolbar_poller
         dwell_toolbar_poller.clear_cursor()

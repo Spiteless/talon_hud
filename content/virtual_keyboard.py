@@ -151,7 +151,7 @@ class Actions:
         global virtual_keyboard_poller
         virtual_keyboard_poller.add_keyboard(name, virtual_keys, layout_style, alignment, horizontal_key_amount, vertical_key_amount)
 
-    def hud_activate_virtual_key():
+    def hud_activate_virtual_key(self):
         """Activate a virtual keyboard key manually"""
         global virtual_keyboard_poller
         virtual_keyboard_poller.activate_key()

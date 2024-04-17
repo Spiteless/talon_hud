@@ -29,7 +29,7 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def hud_toolkit_options():
+    def hud_toolkit_options(self):
         """Shows the content available in the HUD toolkit"""
         choices = actions.user.hud_create_choices([
             {"text": "Documentation"},
@@ -40,7 +40,7 @@ class Actions:
         ], pick_toolkit_option)
         actions.user.hud_publish_choices(choices, "Toolkit options", "Pick content from the HUD Toolkit below")
         
-    def hud_toolkit_debug_options():
+    def hud_toolkit_debug_options(self):
         """Shows the content available in the debug menu of the HUD toolkit"""
         choices = actions.user.hud_create_choices([
             {"text": "Scope"},

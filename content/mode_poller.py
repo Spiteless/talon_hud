@@ -95,11 +95,11 @@ mod = Module()
 @mod.action_class
 class Actions:
 
-    def hud_get_status_modes() -> list[str]:
+    def hud_get_status_modes(self) -> list[str]:
         """Get an ordered list of all the available modes that can be displayed in the status bar and other widget states"""
         return ["dictation", "command", "sleep"]
 
-    def hud_determine_mode() -> str:
+    def hud_determine_mode(self) -> str:
         """Determine the current mode used for the status bar icons and the widget states"""
         active_modes = scope.get("mode")
         available_modes = actions.user.hud_get_status_modes()
@@ -112,7 +112,7 @@ class Actions:
         
         return current_mode
 
-    def hud_toggle_mode():
+    def hud_toggle_mode(self):
         """Toggle the current mode to a new mode"""
         current_mode = actions.user.hud_determine_mode()
         if current_mode in ["command", "dictation"]:

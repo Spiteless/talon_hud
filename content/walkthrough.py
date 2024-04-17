@@ -417,37 +417,37 @@ class Actions:
         global hud_walkthrough
         hud_walkthrough.start_walkthrough(title)
 
-    def hud_skip_walkthrough_step():
+    def hud_skip_walkthrough_step(self):
         """Skip the current walk through step"""
         global hud_walkthrough
         hud_walkthrough.next_step_or_page()
         
-    def hud_previous_walkthrough_step():
+    def hud_previous_walkthrough_step(self):
         """Skip the current walk through step"""
         global hud_walkthrough
         hud_walkthrough.previous_step()
         
-    def hud_skip_walkthrough_all():
+    def hud_skip_walkthrough_all(self):
         """Skip the current walk through step"""
         global hud_walkthrough
         hud_walkthrough.end_walkthrough()
         
-    def hud_restore_walkthrough_step():
+    def hud_restore_walkthrough_step(self):
         """Restore the current walkthrough step if possible"""
         global hud_walkthrough
         hud_walkthrough.restore_walkthrough_step()
         
-    def hud_watch_walkthrough_files():
+    def hud_watch_walkthrough_files(self):
         """Enable watching for changes in the walkthrough files for quicker development"""
         global hud_walkthrough
         hud_walkthrough.set_development_mode(True)
         
-    def hud_unwatch_walkthrough_files():
+    def hud_unwatch_walkthrough_files(self):
         """Disable watching for changes in the walkthrough files for quicker development"""
         global hud_walkthrough
         hud_walkthrough.set_development_mode(False)
         
-    def hud_show_walkthroughs():
+    def hud_show_walkthroughs(self):
         """Show all the currently available walk through options"""
         global hud_walkthrough
         hud_walkthrough.show_options()
